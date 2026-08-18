@@ -19,8 +19,9 @@ RUN pip install --upgrade pip --no-cache-dir && \
 # Expose Hermes API/Gateway port
 EXPOSE 9119
 
-# Ensure Python logs are output in real-time
+# Ensure Python logs are output in real-time and HERMES_HOME points to workspace
 ENV PYTHONUNBUFFERED=1
+ENV HERMES_HOME=/opt/data
 
 # Default entrypoint command
 CMD ["hermes", "gateway"]

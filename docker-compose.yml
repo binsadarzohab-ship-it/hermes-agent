@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     env_file:
       - .env
+    environment:
+      - HERMES_HOME=/opt/data
     ports:
       - "9119:9119"
     volumes:
