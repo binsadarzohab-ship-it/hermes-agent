@@ -12,9 +12,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Set workspace directory inside the container
 WORKDIR /opt/data
 
-# Upgrade pip and install hermes-agent package
+# Upgrade pip and install hermes-agent package and aiohttp for API Server support
 RUN pip install --upgrade pip --no-cache-dir && \
-    pip install --no-cache-dir hermes-agent
+    pip install --no-cache-dir hermes-agent aiohttp
 
 # Expose Hermes API/Gateway port
 EXPOSE 9119
