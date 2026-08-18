@@ -1,0 +1,19 @@
+services:
+  hermes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hermes-agent:local
+    container_name: hermes-agent
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "9119:9119"
+    volumes:
+      - .:/opt/data
+      - hermes_logs:/opt/data/logs
+
+volumes:
+  hermes_logs:
+

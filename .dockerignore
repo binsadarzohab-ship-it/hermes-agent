@@ -1,0 +1,40 @@
+# Secrets and Environment Variables (Important for security)
+.env
+.env.*
+*.csv
+auth.json
+auth.lock
+
+# Version Control & IDE
+.git
+.gitignore
+.vscode
+.idea
+
+# Temporary Files & Logs
+*.log
+.cache
+.local
+.hermes_history
+.skills_prompt_snapshot.json
+.update_check
+.clean_shutdown
+gateway.lock
+
+# Cache directories
+cache/
+audio_cache/
+image_cache/
+lazy-packages/
+
+# Runtime SQLite Databases & State (Mounted at runtime via volumes)
+*.db
+*.db-shm
+*.db-wal
+state/
+memories/
+backups/
+kanban/
+sandboxes/
+sessions/
+terminal-sessions/
